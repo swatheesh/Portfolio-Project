@@ -14,7 +14,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '_@f2e%0gb@12345#i3o35$nsx0)cx7-iyve7g(x909090#1m_fye^9e1-g$swn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['swatweb.herokuapp.com','localhost']
 
