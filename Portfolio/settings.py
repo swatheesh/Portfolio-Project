@@ -6,7 +6,7 @@ https://docs.djangoproject.com/en/2.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
-
+import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -22,7 +22,7 @@ SECRET_KEY = '_@f2e%0gb#i3o35$nsx0)cx7-iyve7g(x#1m_fye^9e1-g$swn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://swatweb2.herokuapp.com/']
 
 
 # Application definition
@@ -128,3 +128,4 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
+django_heroku.settings(locals())
