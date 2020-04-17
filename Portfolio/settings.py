@@ -11,7 +11,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '_@f2e%0gb@12345#i3o35$nsx0)cx7-iyve7g(x909090#1m_fye^9e1-g$swn'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -65,19 +65,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Portfolio.wsgi.application'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-# Database
-# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
-"""DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'djangodb',
-        'USER':'django',
-        'PASSWORD':'django1234',
-        'HOST':'localhost',
-        'PORT':'5433',
-    }
-}"""
 
 DATABASES = {}
 DATABASES['default'] = dj_database_url.config(conn_max_age=600)
