@@ -22,6 +22,7 @@ ALLOWED_HOSTS = ['swatweb.herokuapp.com','localhost']
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'blog.apps.BlogConfig',
     'jobs.apps.JobsConfig',
     'django.contrib.admin',
